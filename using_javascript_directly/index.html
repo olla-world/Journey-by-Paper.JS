@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="./../dist/paper-full.min.js"></script>
+        <script type="text/javascript">
+            window.onload= function(){
+                var canvas = document.getElementById('myCanvas')
+                paper.setup(canvas)
+                
+                var path = new paper.Path()
+                path.strokeColor = "black"
+
+                var start = new paper.Point(100, 100)
+
+                path.moveTo(start)
+                path.lineTo(start.add([200, -50]))
+
+                paper.view.draw()
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="myCanvas" resize></canvas>
+    </body>
+</html>
